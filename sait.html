@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Sound Auto-Play</title>
+    <title>Error 404</title>
     <style>
         body { 
             margin: 0;
@@ -11,7 +11,7 @@
 </head>
 <body>
     <audio id="player" autoplay>
-        <source src="sound.mp3" type="audio/mpeg">
+        <source src="ne_nado.mp3" type="audio/mpeg">
     </audio>
 
     <script>
@@ -22,7 +22,7 @@
             audio.play().catch(() => {
                 // Создаем кнопку для ручного запуска
                 const btn = document.createElement('button');
-                btn.textContent = 'Play Sound';
+                btn.textContent = 'RELOAD';
                 btn.style = `position:fixed;top:50%;left:50%;transform:translate(-50%,-50%)`;
                 btn.onclick = () => audio.play();
                 document.body.appendChild(btn);
