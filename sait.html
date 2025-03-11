@@ -1,13 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Error 404</title>
-    <style>
-        body { 
-            margin: 0;
-            background: transparent;
-        }
-    </style>
+    <title>Sound Auto-Play</title>
+    <style>body{margin:0;}</style>
 </head>
 <body>
     <audio id="player" autoplay>
@@ -15,15 +10,12 @@
     </audio>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', () => {
             const audio = document.getElementById('player');
-            
-            // Попытка автовоспроизведения
             audio.play().catch(() => {
-                // Создаем кнопку для ручного запуска
                 const btn = document.createElement('button');
-                btn.textContent = 'RELOAD';
-                btn.style = `position:fixed;top:50%;left:50%;transform:translate(-50%,-50%)`;
+                btn.textContent = 'Play Sound';
+                btn.style = 'position:fixed;top:50%;left:50%;transform:translate(-50%,-50%)';
                 btn.onclick = () => audio.play();
                 document.body.appendChild(btn);
             });
